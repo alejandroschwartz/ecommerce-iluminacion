@@ -1,0 +1,61 @@
+export default {
+    cart: [],
+    products: [
+        {
+            'id': '1',
+            'image': 'https://i.imgur.com/0Sd2HG0.jpg',
+            'title': 'Cama de dos plazas estilo frances Luis XV',
+            'price': 28000,
+            'description': 'Cama de dos plazas estilo frances Luis XV, Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        },
+        {
+            'id': '2',
+            'image': 'https://i.imgur.com/qCmsHNS.jpg',
+            'title': 'Mesa de luz estilo provenzal alta',
+            'price': 17500,
+            'description': 'Mesa de luz estilo provenzal alta, Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        },
+        {
+            'id': '3',
+            'image': 'https://i.imgur.com/LJPGNag.jpg',
+            'title': 'Par de mesitas de luz Provenzal',
+            'price': 19500,
+            'description': '💗 Se retiro su lustre deslucido, se ajusto y encero luego para recuperar su estado original y funcionalidad. Con 48cm x 37cm prof y 62cm de alto. Precio:$19.500 por el par. Paga desde casa por MercadoPago y te las enviamos a domicilio.',
+        },
+        {
+            'id': '4',
+            'image': 'https://i.imgur.com/lOoxhNN.jpg',
+            'title': 'Comoda estilo Luiz XV',
+            'price': 48000,
+            'description': 'Comoda estilo Luiz XV, Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        },
+        {
+            'id': '5',
+            'image': 'https://i.imgur.com/chu62oE.jpg',
+            'title': 'Araña antigua francesa de bronce con 5 brazos',
+            'price': 9500,
+            'description': 'Araña antigua francesa de bronce con 5 brazos, Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        },
+        {
+            'id': '6',
+            'image': 'https://i.imgur.com/QKVVL4O.jpg',
+            'title': 'Bargueño estilo provenzal de roble muy trabajado',
+            'price': 48000,
+            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        },
+        {
+            'id': '7',
+            'image': 'https://i.imgur.com/OHRui0q.jpg',
+            'title': 'Araña antigua de tres brazos',
+            'price': 15500,
+            'description': 'Bargueño estilo provenzal de roble muy trabajado, Araña antigua de tres brazos, Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        },
+        {
+            'id': '8',
+            'image': 'https://i.imgur.com/MX2UcFy.jpg',
+            'title': 'Comoda de tres cajones estio Luis XVI',
+            'price': 33000,
+            'description': 'Comoda de tres cajones estio Luis XVI, Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        },
+    ],
+};
