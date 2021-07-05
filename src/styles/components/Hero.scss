@@ -1,0 +1,65 @@
+.Home__hero {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    background: rgba(0, 92, 151, 0.4);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgba(54, 56, 150, 0.45), rgba(0, 92, 151, 0.4));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(54, 56, 150, 0.45), rgba(0, 92, 151, 0.4)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+.Home__hero--text {
+    width: 100%;
+    position: absolute;
+    top: 200px;
+    color: #f2f2f2; // #313434;
+    font-size: 30px;
+    z-index: 4;
+
+    @media only screen and (max-width: 540px) {
+        top: 140px;
+        font-size: 22px;
+    }
+    @media only screen and (min-width: 540px) and (max-width: 960px) {
+        top: 160px;
+        font-size: 26px;
+    }
+}
+.Home__hero--image {
+    width: 100vw;
+    
+    position: relative;
+    top: 0px;
+    z-index: -1;
+
+    @media only screen and (max-width: 540px) {
+
+        right: 50%;
+        width: 200vw;
+    }
+    @media only screen and (min-width: 540px) and (max-width: 960px) {
+
+        right: 30%;
+        width: 160vw;
+    }
+}
+.wave3 {
+    margin-bottom: 0px;
+    position: relative;
+    top: 0px;
+    width: 100%;
+    height: 80px; 
+    overflow: hidden;
+    z-index: 5;
+
+    @media only screen and (max-width: 540px) {
+        height: 40px;
+    }
+}
+.wave__svg3 {
+    height: 100%; 
+    width: 100%;
+}
+.wave__path3 {
+    stroke: none; 
+    fill: #f2f2f2;
+}

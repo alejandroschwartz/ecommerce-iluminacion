@@ -1,0 +1,59 @@
+@import "../Vars.scss";
+
+.SocialMedia {
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: auto;
+    padding: 40px 0px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+
+    @media only screen and (max-width: 480px) {
+        width: 300px;
+        padding: 32px 0px;
+    }
+}
+
+.SocialMedia__figure {
+    margin: 20px;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 48px;
+        padding: 20px;
+
+        border-radius: 20px;
+        background: #e0e0e0;
+        box-shadow: 20px 20px 60px #bebebe,
+                    -20px -20px 60px #ffffff;
+    }
+
+    img:hover {
+        width: 52px;
+        padding: 22px;
+    }
+
+    @media only screen and (max-width: 767px) {
+        
+        margin: 12px;
+        height: 80px;
+        width: 80px;
+
+        img {
+            width: 40px;
+            padding: 16px;
+        }
+    
+        img:hover {
+            width: 44px;
+            padding: 28px;
+        }
+    }
+}

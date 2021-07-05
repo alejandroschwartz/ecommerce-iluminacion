@@ -4,13 +4,14 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve( __dirname , 'dist'),
         filename: 'bundle.js',
-        publicPath: "/",
+        publicPath: "./",
     },
     resolve: {
         extensions: ['.js' , '.jsx'],
@@ -42,6 +43,10 @@ module.exports = {
                     'css-loader',
                     'sass-loader'
                 ]
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/,
+                type: "asset/resource"
             }
         ]
     },
@@ -52,6 +57,14 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             filename: '[name].css'
+        }),
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: path.resolve(__dirname, "src", "styles/images"),
+                    to: "styles/images"
+                }
+            ]
         }),
         new CleanWebpackPlugin(),
     ],

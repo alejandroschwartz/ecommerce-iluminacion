@@ -2,6 +2,7 @@ import React from 'react';
 
 import '../styles/components/Layout.scss';
 import Header from './Header';
+import SocialMedia from './SocialMedia';
 import Footer from './Footer';
 
 const Layout = ({ children }) => {
@@ -9,6 +10,7 @@ const Layout = ({ children }) => {
         <div>
             <Header />
                 { children }
+            <SocialMedia />    
             <Footer />
         </div>
     )

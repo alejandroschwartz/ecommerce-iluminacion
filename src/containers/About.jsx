@@ -1,53 +1,40 @@
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
 
-import '../styles/components/About.scss';
+import FotoPerfil from '../styles/images/foto-perfil.jpg'
+import '../styles/components/Description.scss';
 
-const About = () => {
+function About() {
+
+    const markdown = `
+
+### ¿Puedo combinar mis gustos, habilidades, pasión en un proyecto? ¿Programación con javascript con la mecánica?
+
+Esas fueron algunas de las preguntas que me surgieron en un reto de marca personal que realice y este proyecto es mi respuesta. 
+
+Una aplicación web con React, la cual sirve para calcular la intensidad lumínica media dentro de una habitación.
+
+El proyecto nace como un práctico de la facultad de ingeniería mecánica, donde debíamos calcular las luminarias para una industria. Éramos 20 grupos en el curso, por lo tanto 20 planillas de Excel distintas cada año. Por otro lado, vi que la documentación era poca en internet y que no existía una aplicación sencilla para calcularlo. 
+
+Entones, viendo que la tarea realizada era repetitiva trate de ir pasando los cálculos del Excel a esta aplicación y que sea accesible tanto en teléfono como en escritorio.
+
+Espero les guste y sea de utilidad. Saludos 👋
+
+    `;
+
     return (
-        <div className="About" >
-            <div className="About__text--container" >
-                <h1 className="About__h1" >Gran Altillo - Muebles Antiguos</h1>
-                <p className="About__p" >
-                    Nos dedicamos a la venta y restauracion de muebles antiguos de estilo desde 2001. Comenzando en la ciudad de Obera, Misiones, Argentina y desde el 2005 en Posadas.
-                </p>
-                <p className="About__p" >   
-                    Siempre buscamos un equilibrio entre mantener la presencia de "el paso del tiempo" y recuperar la funcionalidad de cada mueble o objeto.
-                </p>
-            </div>
-            <div className="About__photos" >
-                <div className="About__photos--container" >
-                    <img
-                        className="About__photos--image"  
-                        src="https://i.imgur.com/cXlYNAO.jpg" 
-                        alt="vidriera base 2011" 
-                    />
-                    <p className="About__p" >Vidriera de Base 2011</p>
+        <div className="Description__container" >
+            <div className="Description" >
+                <div className="Description__perfil" >
+                    <img className="Description__img" src={FotoPerfil} alt="Foto de perfil" />
                 </div>
-                <div className="About__photos--container" >
-                    <img 
-                        className="About__photos--image" 
-                        src="https://i.imgur.com/fICL18H.jpg" 
-                        alt="vidriera base 2010" 
-                    />
-                    <p className="About__p" >Vidriera de Base 2012</p>
-                </div>                
-                <div className="About__photos--container" >
-                    <img 
-                        className="About__photos--image" 
-                        src="https://i.imgur.com/isGfbwv.jpg" 
-                        alt=" Expo 2012" 
-                    />
-                    <p className="About__p" >Expo FICOP 2012</p>
-                </div>                
-                <div className="About__photos--container" >
-                    <img 
-                        className="About__photos--image" 
-                        src="https://i.imgur.com/6bozcte.jpg" 
-                        alt="Muebles para fotografia" 
-                    />
-                    <p className="About__p" >Alquileres para fotografias, eventos escpeciales, casamientos.</p>
+                <div className="Description__info">
+                    <h1>Sobre mí y este proyecto.</h1>
+                    <h2>¿Por qué lo realice y cuál es mi idea del proyecto?</h2>
+                    <h3>Por: Alejandro Matias Schwartz</h3>
                 </div>
             </div>
+            <ReactMarkdown children={markdown} />
         </div>
     )
 }
