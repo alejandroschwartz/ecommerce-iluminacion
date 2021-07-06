@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
-import FotoPerfil from '../styles/images/foto-perfil.jpg'
-import galpon from '../styles/images/galpon.jpg'
+import FotoPerfil from '../styles/images/foto-perfil.jpg';
+import galpon from '../styles/images/galpon.jpg';
+import calc1 from '../styles/images/calc-1.png';
+import calc2 from '../styles/images/calc-2.png';
+import calc3 from '../styles/images/calc-3.png';
+import calc4 from '../styles/images/calc-4.png';
 import '../styles/components/Description.scss';
 
 function Description() {
@@ -29,19 +33,56 @@ Los datos de entrada para realizar el cálculo son:
 
 -	Determinar el factor de mantenimiento (fm) o conservación de la instalación que depende de la suciedad del ambiente.
 
+
+&nbsp;
+
 ### Cálculo del flujo luminoso
 
-Φt = (E.S)/(n .fm)
+![image](${calc1})
+
+- _Φt_ = Flujo luminoso total
+
+- _E_ = Iluminancia media deseada
+
+- _S_ = Superficie del plano de trabajo
+
+- _η_ = Factor de utilización 
+
+- _fm_ = Factor de mantenimiento.
+
+
+&nbsp;
 
 ### Cálculo del número de luminarias
 
-N = Φt/(nl .Φt)
+![image](${calc2})
+
+- _N_ = Número de luminarias
+
+- _Φt_ = Flujo luminoso total
+
+- _Φl_ = Flujo luminoso por lampara 
+
+- _nl_ = Numero de lámparas por luminaria 
+
+
+
+&nbsp;
 
 ### Emplazamiento de luminarias 
 
-N ancho = √((N total .ancho)/largo)
+![image](${calc3})
 
-N largo = (N total .ancho)/largo
+![image](${calc4})
+
+
+&nbsp;
+
+---
+
+
+
+&nbsp;
 
 
     `;

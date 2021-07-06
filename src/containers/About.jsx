@@ -8,7 +8,7 @@ function About() {
 
     const markdown = `
 
-### ¿Puedo combinar mis gustos, habilidades, pasión en un proyecto? ¿Programación con javascript con la mecánica?
+### ¿Puedo combinar mis habilidades y pasiones en un proyecto? ¿Programación web con la mecánica?
 
 Esas fueron algunas de las preguntas que me surgieron en un reto de marca personal que realice y este proyecto es mi respuesta. 
 
@@ -18,7 +18,18 @@ El proyecto nace como un práctico de la facultad de ingeniería mecánica, dond
 
 Entones, viendo que la tarea realizada era repetitiva trate de ir pasando los cálculos del Excel a esta aplicación y que sea accesible tanto en teléfono como en escritorio.
 
+
+
+&nbsp;
+
 Espero les guste y sea de utilidad. Saludos 👋
+
+---
+
+
+
+&nbsp;
+
 
     `;
 

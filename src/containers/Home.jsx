@@ -8,6 +8,7 @@ import Select from '../components/Select';
 
 import PiezaPerspectiva from '../styles/images/pieza-perspectiva.png';
 import oficina from '../styles/images/oficina.png';
+import indiceLocal from '../styles/images/indice-local.png';
 
 function Home() {
   const [lumen, setLumen] = useState({ campo: "750", valido: null });
@@ -16,7 +17,9 @@ function Home() {
   const [largo, setLargo] = useState({ campo: "", valido: null });
   const [calculo, setCalculo] = useState(0);
   const [calculoFlujo, setCalculoFlujo] = useState(0);
-  const [formValido, setFormValido] = useState(false)
+  const [valido, setValido] = useState(false);
+  const [formIndice, setFormIndice] = useState(false);
+  const [formFlujo, setFormFlujo] = useState(false);
 
   const [luminariaTotal, setLuminariaTotal] = useState(0);
   const [luminariaAncho, setLuminariaAncho] = useState(0);
@@ -50,7 +53,25 @@ function Home() {
   const calcular = (e) => {
     e.preventDefault();
     setCalculo( (parseFloat(ancho.campo) * parseFloat(largo.campo)) / (parseFloat(alto.campo) * (parseFloat(ancho.campo) + parseFloat(largo.campo))) );
+    setFormIndice(true);
   };
+  const validarForm = () => {
+    if (alto.campo.length > 0) {
+      setAlto({ ...alto, valido: true });
+    } else {
+      setAlto({ ...alto, valido: false });
+    }
+    if (ancho.campo.length > 0) {
+      setAncho({ ...ancho, valido: true });
+    } else {
+      setAncho({ ...ancho, valido: false });
+    }
+    if (largo.campo.length > 0) {
+      setLargo({ ...largo, valido: true });
+    } else {
+      setLargo({ ...largo, valido: false });
+    }
+  }
   const calcularFlujo = (e) => {
     e.preventDefault();
     const flujo = (parseFloat(lumen.campo) * (parseFloat(ancho.campo) * parseFloat(largo.campo))) / (parseFloat(utilizacion.campo) * parseFloat(mantenimiento.campo));
@@ -61,7 +82,7 @@ function Home() {
     setLuminariaTotal(numLuminaria);
     setLuminariaAncho(numLuminariaAncho);
     setLuminariaLargo(numLuminariaLargo);
-    setFormValido(true);
+    setFormFlujo(true);
   };
 
   return (
@@ -69,9 +90,10 @@ function Home() {
       <Hero />
       <div className="Home">
         <h2>Método de los lúmenes</h2>
+        <p className="Home__text" >Primero debes seleccionar el tipo de habitación con sus medidas y luego la luminaria para obtener el índice k.</p>
         <div className="Home__form--div">
           <img
-            className="Home__img"
+            className="Home__img--small"
             src={PiezaPerspectiva}
             alt="Pieza en perspectiva"
           />
@@ -96,46 +118,67 @@ function Home() {
             name="alto"
             onchange={changeAlto}
             value={alto.campo}
+            validar={validarForm}
+            valido={alto.valido}
+            textError="Invalido! Altura en metros. Para fracciónes usar punto antes del decimal."
           />
           <Input 
             label="Ancho (m.): "
             name="ancho"
             onchange={changeAncho}
             value={ancho.campo}
+            validar={validarForm}
+            valido={ancho.valido}
+            textError="Invalido! Ancho en metros. Para fracciónes usar punto antes del decimal."
           />
           <Input 
             label="Largo (m.): "
             name="largo"
             onchange={changeLargo}
             value={largo.campo}
+            validar={validarForm}
+            valido={largo.valido}
+            textError="Invalido! Largo en metros. Para fracciónes usar punto antes del decimal."
           />
           <input className="Btn" type="submit" value="Calcular" />
         </form>
-        <h3>Índice del local k: {calculo.toFixed(2)}</h3>
-        <div className="Home__form--div">
-          <img className="Home__img" src={oficina} alt="Pieza en perspectiva" />
-        </div>
-        <form onSubmit={calcularFlujo} className="Home__form">
-          <Input 
-            label="Utilización: "
-            name="lumen"
-            onchange={changeUtilizacion}
-            value={utilizacion.campo}
-          />
-          <Input 
-            label="Mantenimiento: "
-            name="mantenimiento"
-            onchange={changeMantenimiento}
-            value={mantenimiento.campo}
-          />
-          <input className="Btn" type="submit" value="Calcular flujo luminoso"      />
-        </form>
-        <h3>Flujo luminoso total Qt : {calculoFlujo.toFixed(0)} lux</h3>
-        {formValido === true 
-          ? <p className="Home__formValido" >
-            Considerando la lumininaria seleccionada, la cantidad mínima para superar el flujo luminoso esperado será de <strong>{ Math.ceil(luminariaTotal.toFixed(0)) } Luminarias</strong> en la habitación, con una distribución de <strong>{Math.ceil(luminariaAncho)} Luminarias</strong> ({" "} {luminariaAncho.toFixed(2)} ) a lo ancho y de <strong>{Math.ceil(luminariaLargo.toFixed(2))} Luminarias</strong> ( {luminariaLargo.toFixed(2)} ) a lo largo de la misma. </p>
+
+        {formIndice === true
+          ? <>
+              <h3>Índice del local k: {calculo.toFixed(2)}</h3>
+              <p className="Home__text" >Ahora con el valor de k obtenido y según los colores de techo, pared y piso podes buscar en la tabla el factor de utilización o usar el valor por defecto para calcular las Lamparas.</p>
+              <div className="Home__form--div">
+                <img className="Home__img" src={indiceLocal} alt="índice local k" />
+              </div>
+              <form onSubmit={calcularFlujo} className="Home__form">
+                <Input 
+                  label="Utilización: "
+                  name="lumen"
+                  onchange={changeUtilizacion}
+                  value={utilizacion.campo}
+                />
+                <Input 
+                  label="Mantenimiento: "
+                  name="mantenimiento"
+                  onchange={changeMantenimiento}
+                  value={mantenimiento.campo}
+                />
+                <input className="Btn" type="submit" value="Calcular flujo luminoso"      />
+              </form>
+            </>
           : <></>
         }
+
+        {formFlujo === true 
+          ? <>
+              <h3>Flujo luminoso total Qt : {calculoFlujo.toFixed(0)} lux</h3>
+              <p className="Home__text" >
+                La cantidad mínima para superar el flujo luminoso esperado será de { Math.ceil(luminariaTotal)} Luminarias en la habitación, aunque la distribución ideal sera de <strong>{Math.ceil(luminariaAncho)} Luminarias</strong> ({luminariaAncho.toFixed(2)}) a lo ancho y de <strong>{Math.ceil(luminariaLargo)} Luminarias</strong> ({luminariaLargo.toFixed(2)}) a lo largo, un total de <strong>{Math.ceil(luminariaAncho) * Math.ceil(luminariaLargo)} Luminarias</strong>. 
+              </p>
+            </>
+          : <></>
+        }
+
       </div>
     </>
   );
