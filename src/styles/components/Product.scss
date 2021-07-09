@@ -1,0 +1,41 @@
+@import "../Vars.scss";
+
+.Products {
+    display: flex;
+    justify-content: center;
+}
+
+.Products__input--container {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Products__input {
+    width: 50%;
+    min-width: 280px;
+    padding: 6px 18px;
+    border: 2px solid #bbbbbb;
+    border-radius: 6px;
+}
+
+.Products__container {
+    // border: 2px solid red;
+    margin: 48px 0px;
+    max-width: 940px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Products__error {
+    text-align: center;
+}
+
+.fa-search {
+    height: 40vh;
+    font-size: 120px;
+    text-align: center;
+}

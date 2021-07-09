@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Input = ({ label, name, onchange, value, validar, valido,textError }) => {
+const Input = ({ label, name, onchange, value, validar, valido, textError }) => {
     return (
         <div className="Home__form--div">
             <label>{label}</label>

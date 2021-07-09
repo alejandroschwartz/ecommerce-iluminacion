@@ -5,17 +5,22 @@ import Home from "../containers/Home";
 import Layout from "../components/Layout";
 import Description from "../containers/Description";
 import About from "../containers/About";
+import Product from '../containers/Products';
 
-const App = () => (
-    <BrowserRouter>
-        <Layout>
-            <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/descripcion" component={Description} />
-                <Route exact path="/sobre-mi" component={About} />
-            </Switch>
-        </Layout>
-    </BrowserRouter>
-);
+const App = () => {
+
+    return(
+            <BrowserRouter>
+                <Layout>
+                    <Switch>
+                        <Route exact path="/" component={Home} />
+                        <Route exact path="/productos" component={Product} />
+                        <Route exact path="/descripcion" component={Description} />
+                        <Route exact path="/sobre-mi" component={About} />
+                    </Switch>
+                </Layout>
+            </BrowserRouter>
+    )
+};
 
 export default App;
