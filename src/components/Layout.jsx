@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../styles/components/Layout.scss';
+import '../assets/styles/Layout.scss';
 import Header from './Header';
 import SocialMedia from './SocialMedia';
 import Footer from './Footer';

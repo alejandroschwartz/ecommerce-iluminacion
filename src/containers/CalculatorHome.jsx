@@ -1,10 +1,10 @@
 import React from 'react';
 
-import '../styles/components/Calculator.scss';
-import hogar from '../styles/images/hogar.jpg';
-import cocina from '../styles/images/cocina.jpg';
-import dormitorio from '../styles/images/dormitorio.jpg';
-import banno from '../styles/images/banno.jpg';
+import '../assets/styles/Calculator.scss';
+import hogar from '../assets/images/hogar.jpg';
+import cocina from '../assets/images/cocina.jpg';
+import dormitorio from '../assets/images/dormitorio.jpg';
+import banno from '../assets/images/banno.jpg';
 
 
 const CalculatorHome = ({onclick}) => {

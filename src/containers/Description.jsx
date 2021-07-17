@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
-import FotoPerfil from '../styles/images/foto-perfil.jpg';
-import galpon from '../styles/images/galpon.jpg';
-import calc1 from '../styles/images/calc-1.png';
-import calc2 from '../styles/images/calc-2.png';
-import calc3 from '../styles/images/calc-3.png';
-import calc4 from '../styles/images/calc-4.png';
-import '../styles/components/Description.scss';
+import galpon from '../assets/images/galpon.jpg';
+import calc1 from '../assets/images/calc-1.png';
+import calc2 from '../assets/images/calc-2.png';
+import calc3 from '../assets/images/calc-3.png';
+import calc4 from '../assets/images/calc-4.png';
+import '../assets/styles/Description.scss';
 
 function Description() {
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
-import FotoPerfil from '../styles/images/foto-perfil.jpg'
-import '../styles/components/Description.scss';
+import FotoPerfil from '../assets/images/foto-perfil.jpg'
+import '../assets/styles/Description.scss';
 
 function About() {
 

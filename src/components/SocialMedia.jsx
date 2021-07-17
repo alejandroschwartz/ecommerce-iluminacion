@@ -1,10 +1,10 @@
 import React from 'react';
 
-import twitter from '../styles/images/twitter.svg';
-import instagram from '../styles/images/instagram.svg';
-import linkedin from '../styles/images/linkedin.svg';
-import github from '../styles/images/github.svg';
-import '../styles/components/SocialMedia.scss';
+import twitter from '../assets/images/twitter.svg';
+import instagram from '../assets/images/instagram.svg';
+import linkedin from '../assets/images/linkedin.svg';
+import github from '../assets/images/github.svg';
+import '../assets/styles/SocialMedia.scss';
 
 const SocialMedia = () => {
     return (

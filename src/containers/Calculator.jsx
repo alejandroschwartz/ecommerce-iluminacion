@@ -1,8 +1,8 @@
 import React from 'react';
 
-import '../styles/components/Calculator.scss';
-import oficinaCalc from '../styles/images/oficina-calc.jpg';
-import hogar from '../styles/images/hogar.jpg';
+import '../assets/styles/Calculator.scss';
+import oficinaCalc from '../assets/images/oficina-calc.jpg';
+import hogar from '../assets/images/hogar.jpg';
 
 function Calculator({ onclick }) {
 

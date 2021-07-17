@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import '../styles/components/Header.scss';
+import '../assets/styles/Header.scss';
 
 const Header = () => {
 

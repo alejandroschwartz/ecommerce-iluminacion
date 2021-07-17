@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import Item from "./Item";
-import "../styles/components/Product.scss";
+import "../assets/styles/Product.scss";
 
 const Product = ({ products }) => {
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import '../styles/components/Item.scss';
+import '../assets/styles/Item.scss';
 
 const Item = ({ product }) => {
     return (

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import CalculatorItem from "./CalculatorItem";
-import "../styles/components/Product.scss";
+import "../assets/styles/Product.scss";
 
 const Product = ({ products, onclick }) => {
   const [search, setSearch] = useState("");

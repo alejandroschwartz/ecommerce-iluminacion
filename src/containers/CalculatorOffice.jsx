@@ -1,9 +1,9 @@
 import React from 'react';
 
-import oficinaCalc from '../styles/images/oficina-calc.jpg';
-import salaComputos from '../styles/images/sala-computos.jpg';
-import salaConferencia from '../styles/images/sala-conferencia.jpg';
-import salaPasillo from '../styles/images/sala-pasillo.jpg';
+import oficinaCalc from '../assets/images/oficina-calc.jpg';
+import salaComputos from '../assets/images/sala-computos.jpg';
+import salaConferencia from '../assets/images/sala-conferencia.jpg';
+import salaPasillo from '../assets/images/sala-pasillo.jpg';
 
 const CalculatorOffice = ({onclick}) => {
 
