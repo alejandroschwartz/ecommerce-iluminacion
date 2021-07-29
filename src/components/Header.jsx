@@ -11,7 +11,7 @@ const Header = () => {
         <header className="Header" >
             <div className="Header__container" >
                 <div className="Header__title" >
-                    <h1>Cálculo de iluminación</h1>
+                    <h1>Ale e-commerce</h1>
                 </div>
                 <button className="Header__icon" onClick={() => setNav(!nav)} >
                     {nav === true 
@@ -21,10 +21,10 @@ const Header = () => {
                 </button>
                 <ul className={nav === false ? "Header__menu" : "Header__menu--active"} onClick={() => setNav(!nav)} >  
                     <Link to="/productos" className="Header__menu--list" >
-                        Productos
+                        Tienda led
                     </Link>
                     <Link to="/" className="Header__menu--list" >
-                        Calculadora
+                        Cálculo led
                     </Link>
                     <Link to="/descripcion" className="Header__menu--list" >
                         Descripción

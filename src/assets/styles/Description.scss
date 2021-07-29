@@ -1,3 +1,4 @@
+@import "../Vars.scss";
 
 .Description__container {
     margin: auto;
@@ -12,13 +13,13 @@
     flex-wrap: wrap;
     justify-content: space-around;
     padding-bottom: 24px;
-    border-bottom: 3px solid #111190;
+    border-bottom: 4px solid $fifth-color;
 }
 
 .Description__perfil {
     width: 200px;
     height: 200px;
-    border: 3px solid #111190;
+    border: 4px solid $fifth-color;
     border-radius: 50%;
     overflow: hidden;
 }

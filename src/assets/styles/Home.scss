@@ -11,14 +11,20 @@
 
 .Home__form {
     width: 100%;
-    max-width: 400px;
-    
+    max-width: 400px;   
 }
 
 .Home__text {
     max-width: 600px;
     padding: 8px;
     font-size: 22px;
+    
+    h1, h2 {
+        text-align: center;
+    }
+    p {
+        margin-right: auto;
+    }
 
     @media screen and (max-width:769px) {
         font-size: 18px;
@@ -80,7 +86,7 @@
     justify-content: center;
     border: none;
     border-radius: 8px;
-    background: rgba(0, 92, 151, 0.6);
-    color: #f2f2f2;
+    background: $sixth-color;
+    color: $background-secondary;
     font-weight: 600;
 }

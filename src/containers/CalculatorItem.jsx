@@ -1,31 +1,32 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 
 import '../assets/styles/Item.scss';
 
 const Item = ({ product, onclick }) => {
     return (
-        // <Link to={`/products/${product.id}`} className="Item__hover" >
-            <button className="Item" onClick={onclick} >
-                <div className="Item__container" >
-                    <img 
-                        className="Item__image" 
-                        src={product.image} 
-                        alt={product.title} 
-                        name={product.lux}
-                    />
-                </div>
-                <div className="Item__text" >
-                    <h3 className="Item__title" >
-                        {product.lux} lux  |  {product.watts} watts 
-                    </h3>
-                    <h2 className="Item__title" >
-                        {product.title}
-                    </h2>
-                </div>
-            </button>
-        // </Link>
-    )
+        <button
+            className="Item ItemCalculator"
+            onClick={onclick}
+        >
+            <div className="Item__container">
+                <img
+                    className="Item__image"
+                    src={product.image}
+                    alt={product.title}
+                    name={product.lux}
+                />
+            </div>
+            <div className="Item__text">
+                <h2>$ {product.price}</h2>
+                <p>
+                    {product.lux} lux | {product.watts} watts
+                </p>
+                <p>
+                    <strong>{product.title}</strong>
+                </p>
+            </div>
+        </button>
+    );
 }
 
 export default Item;

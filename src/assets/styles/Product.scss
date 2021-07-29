@@ -14,15 +14,14 @@
 }
 
 .Products__input {
-    width: 50%;
     min-width: 280px;
+    max-width: 600px;
     padding: 6px 18px;
-    border: 2px solid #bbbbbb;
+    border: 2px solid $primary-color;
     border-radius: 6px;
 }
 
 .Products__container {
-    // border: 2px solid red;
     margin: 48px 0px;
     max-width: 940px;
     display: flex;

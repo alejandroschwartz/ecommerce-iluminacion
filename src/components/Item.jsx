@@ -5,7 +5,7 @@ import '../assets/styles/Item.scss';
 
 const Item = ({ product }) => {
     return (
-        <Link to={`/products/${product.id}`} className="Item__hover" >
+        <Link to={`/productos/${product.id}`} className="Item__hover" >
             <div className="Item">
                 <div className="Item__container" >
                     <img 
@@ -15,12 +15,13 @@ const Item = ({ product }) => {
                     />
                 </div>
                 <div className="Item__text" >
-                    <h3 className="Item__title" >
+                    <h2>$ {product.price} </h2>
+                    <p>
                         {product.lux} lux  |  {product.watts} watts 
-                    </h3>
-                    <h2 className="Item__title" >
-                        {product.title}
-                    </h2>
+                    </p>
+                    <p>
+                        <strong>{product.title}</strong>
+                    </p>
                 </div>
             </div>
         </Link>

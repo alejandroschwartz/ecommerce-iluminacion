@@ -112,24 +112,28 @@ function Home() {
   };
   const handleAmbienteHogar = (e) => {
     e.preventDefault();
-    setLumen({ ...lumen, campo: e.target.name });
+    const hogar = document.getElementById("idHog").value;
+    setLumen({ ...lumen, campo: hogar });
     setAmbienteHogar(false);
     setProductos(true);
-    console.log("hogar: " + e.target.name);
+    console.log("hogar: " + hogar);
   };
   const handleAmbienteOficina = (e) => {
     e.preventDefault();
-    setLumen({ ...lumen, campo: e.target.name });
+    const oficina = document.getElementById("idOfi").value;
+    setLumen({ ...lumen, campo: oficina });
     setAmbienteOficina(false);
     setProductos(true);
-    console.log("oficina: " + e.target.name);
+    console.log("oficina: " + oficina);
   };
   const handleSelecProducto = (e) => {
     e.preventDefault();
-    setLuminaria({ ...luminaria, campo: e.target.name });
-    setProductos(false);
-    setFormUno(true);
-    console.log("lampara: " + e.target.name);
+    if(e.target.name != undefined) {
+      setLuminaria({ ...luminaria, campo: e.target.name });
+      setProductos(false);
+      setFormUno(true);
+      console.log("lampara: " + e.target.name);
+    }
   }
   // ----------------
 
@@ -137,7 +141,7 @@ function Home() {
 
   return (
     <>
-      <Hero />
+      {/* <Hero /> */}
       <div className="Home">
         {ambiente && (
           <Calculator onclick={handleAmbiente} />
@@ -212,8 +216,8 @@ function Home() {
 
         {formFlujo && (
           <>
-            <h1>Resultado</h1>
-            <h3>Flujo luminoso total Qt : {calculoFlujo.toFixed(0)} lux</h3>
+            <h1 className="Home__text">Resultado</h1>
+            <h2 className="Home__text">Distribución de la iluminación mínima</h2>
             <p className="Home__text">
               La cantidad mínima para superar el flujo luminoso esperado será de{" "}
               {Math.ceil(luminariaTotal)} Luminarias en la habitación, aunque la
@@ -227,6 +231,10 @@ function Home() {
                 Luminarias
               </strong>
             </p>
+            <h2 className="Home__text">Datos del cálculo</h2>
+            <p className="Home__text">El flujo luminoso total Qt : <strong>{calculoFlujo.toFixed(0)} lux</strong></p>
+            <p className="Home__text">El flujo luminoso por unidad de la lampara seleccionada es : <strong>{luminaria.campo} lux</strong></p>
+            <p className="Home__text">La iluminancia mínimima por norma para el ambinete seleccionado es : <strong>{lumen.campo} lux</strong></p>
             <input
               className="Btn"
               type="button"

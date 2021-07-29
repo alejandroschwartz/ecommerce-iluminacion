@@ -5,8 +5,8 @@ import "../assets/styles/Product.scss";
 
 const Product = ({ products, onclick }) => {
   const [search, setSearch] = useState("");
-  const handleSearch = (event) => {
-    setSearch(event.target.value);
+  const handleSearch = (e) => {
+    setSearch(e.target.value);
   };
   const items = products.filter((item) => {
     return item.title.toLowerCase().includes(search.toLowerCase());

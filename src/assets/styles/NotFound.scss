@@ -1,0 +1,73 @@
+@import '../Vars.scss';
+
+.mainbox {
+    height: 100vh;
+    background: $sixth-color;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainbox__container {
+    height: 400px;
+    width: 600px;
+    border: 2px solid $thirth-color;
+    border-radius: 48px;
+    background-color: rgba(255, 255, 255, 0.35);
+    margin: 60px 30px;
+    padding: 20px 20px;
+}
+
+.mainbox__numbers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.err {
+    font-family: $primary-font;
+    font-size: 11rem;
+    color: $thirth-color;
+}
+
+.fa-question-circle {
+    font-size: 8.5rem;
+    color: $thirth-color;
+    margin-top: 38px;
+}
+
+.msg {
+    text-align: center;
+    font-family: $primary-font;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.msg__home {
+  text-decoration: none;
+  color: $thirth-color;
+}
+
+.msg__home:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 580px) {
+
+    .mainbox__container {
+        margin: 60px 8px;
+        padding: 20px 8px;
+    }
+
+    .err {
+        font-size: 8.7rem;
+    }
+    
+    .fa-question-circle {
+        font-size: 6.4rem;
+    }
+
+    .msg {
+        font-size: 1.2rem;
+    }
+}
